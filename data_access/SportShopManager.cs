@@ -32,6 +32,20 @@ namespace data_access
             }
             Console.WriteLine('\n' + new string('_', 100));
         }
+        private Product GetProduct(SqlDataReader reader)
+        {
+            return new Product()
+            {
+
+                Id = (int)reader["Id"],
+                Name = (string)reader["Name"],
+                Price = (int)reader["Price"],
+                CostPrice = (int)reader["CostPrice"],
+                Quantity = (int)reader["Quantity"],
+                Producer = (string)reader["Producer"],
+                Type = (string)reader["TypeProduct"],
+            };
+        }
 
         // ------------ public interface
         public void ShowAllProducts()
@@ -51,6 +65,18 @@ namespace data_access
             ShowTable(reader);
         }
 
+        public IEnumerable<Product> GetAllProducts()
+        {
+            const string cmd = "select * from Products;";
+            SqlCommand sql = new(cmd, connection);
+
+            using var reader = sql.ExecuteReader();
+
+            while (reader.Read())
+            {
+                yield return GetProduct(reader);
+            }
+        }
         public Product? GetProduct(string name)
         {
             string cmd = $"select * from Products where Name = @name;";
@@ -62,16 +88,7 @@ namespace data_access
             if (!reader.Read())
                 return null;
 
-            return new Product()
-            {
-                Id = (int)reader["Id"],
-                Name = (string)reader["Name"],
-                Price = (int)reader["Price"],
-                CostPrice = (int)reader["CostPrice"],
-                Quantity = (int)reader["Quantity"],
-                Producer = (string)reader["Producer"],
-                Type = (string)reader["TypeProduct"],
-            };
+            return GetProduct(reader);
         }
         public IEnumerable<Product> GetProductsByClient(int clientId)
         {
@@ -83,16 +100,7 @@ namespace data_access
 
             while (reader.Read())
             {
-                yield return new Product()
-                {
-                    Id = (int)reader["Id"],
-                    Name = (string)reader["Name"],
-                    Price = (int)reader["Price"],
-                    CostPrice = (int)reader["CostPrice"],
-                    Quantity = (int)reader["Quantity"],
-                    Producer = (string)reader["Producer"],
-                    Type = (string)reader["TypeProduct"],
-                };
+                yield return GetProduct(reader);
             }
         }
 
