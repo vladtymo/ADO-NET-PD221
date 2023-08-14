@@ -46,7 +46,7 @@ namespace _02_dataset
             dataSet = new();
             adapter.Fill(dataSet);
 
-            // do work, make changes
+            // ...do work, make changes...
             //MessageBox.Show(dataSet.Tables[0].Rows[0]["Name"].ToString());
             grid.ItemsSource = dataSet.Tables[0].DefaultView;   
         }

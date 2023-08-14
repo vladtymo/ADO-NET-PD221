@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "data_access", "data_access\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_wpf_client", "01_wpf_client\01_wpf_client.csproj", "{079C897F-838E-4A68-A252-9A51B23AA3C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_dataset", "02_dataset\02_dataset.csproj", "{97A5E17A-E3EB-426B-9B8A-C41CA374CDA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_dataset", "02_dataset\02_dataset.csproj", "{97A5E17A-E3EB-426B-9B8A-C41CA374CDA6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03_linq_to_sql", "03_linq_to_sql\03_linq_to_sql.csproj", "{B9295C4D-448A-49DA-89A0-1621EC4E7861}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_linq_to_sql_framework", "03_linq_to_sql_framework\03_linq_to_sql_framework.csproj", "{2DE36A87-38CD-4354-A08E-DD9D78B31583}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{97A5E17A-E3EB-426B-9B8A-C41CA374CDA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97A5E17A-E3EB-426B-9B8A-C41CA374CDA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97A5E17A-E3EB-426B-9B8A-C41CA374CDA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9295C4D-448A-49DA-89A0-1621EC4E7861}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9295C4D-448A-49DA-89A0-1621EC4E7861}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9295C4D-448A-49DA-89A0-1621EC4E7861}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9295C4D-448A-49DA-89A0-1621EC4E7861}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DE36A87-38CD-4354-A08E-DD9D78B31583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DE36A87-38CD-4354-A08E-DD9D78B31583}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DE36A87-38CD-4354-A08E-DD9D78B31583}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DE36A87-38CD-4354-A08E-DD9D78B31583}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
